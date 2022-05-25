@@ -1,0 +1,55 @@
+.add-student__container {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(114, 91, 227);
+  background: linear-gradient(
+    90deg,
+    rgba(114, 91, 227, 1) 0%,
+    rgba(34, 73, 185, 1) 43%,
+    rgba(23, 110, 217, 1) 78%
+  );
+}
+
+.card-container {
+  width: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  background-color: rgb(239, 246, 190);
+  box-shadow: -1px 6px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 6px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 6px 12px 0px rgba(0, 0, 0, 0.75);
+  margin: 5px;
+  width: 20vw;
+  padding: 20px;
+}
+.label {
+  font-weight: 700;
+  margin: 5px;
+}
+
+.add-student__btn {
+  width: 10vw;
+  height: 35px;
+  margin: 20px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.add-student__btn:hover {
+  background-color: rgba(176, 74, 194, 0);
+  border: 2px solid black;
+  color: black;
+}
+
+.add-student__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
