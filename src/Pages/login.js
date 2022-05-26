@@ -14,16 +14,23 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const userData = await createUserWithEmailAndPassword(
-        fireBaseAuth,
-        user.email,
-        user.password
-      );
-      nav("/students");
-    } catch (err) {
-      alert(err.message);
-    }
+    //   try {
+    //     await createUserWithEmailAndPassword(
+    //       fireBaseAuth,
+    //       user.email,
+    //       user.password
+    //     );
+    //     nav("/students");
+    //   } catch (err) {
+    //     alert(err.message);
+    //   }
+    createUserWithEmailAndPassword(fireBaseAuth, user.email, user.password)
+      .then(() => {
+        nav("/students");
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
   };
 
   return (

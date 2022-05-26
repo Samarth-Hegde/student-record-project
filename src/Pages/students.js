@@ -8,11 +8,8 @@ function Students() {
 
   useEffect(() => {
     const databaseRef = ref(fireBaseDatabase, "/students");
-    const data = onValue(databaseRef, async (snapshot) => {
-      const studentArr = Object.values(snapshot.val());
-      setTimeout(() => {
-        setStudents(studentArr);
-      }, 1);
+    onValue(databaseRef, (snapshot) => {
+      setStudents(Object.values(snapshot.val()));
     });
   }, []);
   return (
