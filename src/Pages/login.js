@@ -14,16 +14,6 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //   try {
-    //     await createUserWithEmailAndPassword(
-    //       fireBaseAuth,
-    //       user.email,
-    //       user.password
-    //     );
-    //     nav("/students");
-    //   } catch (err) {
-    //     alert(err.message);
-    //   }
     createUserWithEmailAndPassword(fireBaseAuth, user.email, user.password)
       .then(() => {
         nav("/students");
